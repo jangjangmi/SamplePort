@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <form action="Index.html">
+        <Button>
+            <i class="fa fa-mail-reply"></i>
+        </Button>
+    </form>
+
+    <h1 class="hwan">These are my projects that I've attempted to make</h1>
+    <p class="hwan">Here are GitHub links that can redirect you to a page</p>
+
+    <div class="container"> 
+        <p class="hover-paragraph"><i class="fa fa-play" style="color: aqua;" id="link"> This is a background changing theme I coded</i></p>
+        <a href="https://jangjangmi.github.io/bgs/" target="_blank" class="toggle-link">My background changing sample</a>
+    </div>
+
+    <div class="container"> 
+        <p class="hover-paragraph"><i class="fa fa-play" style="color: aqua;"> Some of my projects are just for fun, really</i></p>
+        <a href="https://jangjangmi.github.io/cutieSample/" target="_blank" class="toggle-link">This is where I dumped some creativity</a>
+    </div>
+
+    <div class="container"> 
+        <p class="hover-paragraph"><i class="fa fa-play" style="color: aqua;"> And this one too is for fun</i></p>
+        <a href="https://jangjangmi.github.io/hehehe/" target="_blank" class="toggle-link">A thing to send to friends for fun!!!</a>
+    </div>
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".container");
+
+    containers.forEach(container => {
+        const hoverParagraph = container.querySelector(".hover-paragraph");
+        const toggleLink = container.querySelector(".toggle-link");
+
+        let isLinkVisible = false;
+
+        hoverParagraph.addEventListener("mouseenter", () => {
+            if (!isLinkVisible) {
+                toggleLink.classList.add("show");
+            }
+        });
+
+        hoverParagraph.addEventListener("mouseleave", () => {
+            if (!isLinkVisible) {
+                toggleLink.classList.remove("show");
+            }
+        });
+
+        hoverParagraph.addEventListener("click", () => {
+            isLinkVisible = !isLinkVisible;
+            toggleLink.classList.toggle("show", isLinkVisible);
+        });
+    });
+});
+
+//ripple effect
+
+document.body.addEventListener('click', function(e) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+
+    const size = 150; // Set a fixed size for the ripple
+    ripple.style.width = ripple.style.height = `${size}px`;
+
+    const x = e.clientX - size / 2; // Center the ripple
+    const y = e.clientY - size / 2; // Center the ripple
+
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+});
+
+ </script>
+</body>
+</html>

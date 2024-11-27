@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.flaticon.com/free-icon-font/facebook_6422199?related_id=6422199">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content">
+
+
+    <div class="nav-icon" id="navToggle">
+        <i class="fa fa-navicon"></i>
+    </div>
+
+    <div class="nav-options" id="navOptions">
+        <a href="Index.html">Home</a>
+        <a href="project.html">Projects</a>
+    </div>
+    
+    <img src="myPic.png" alt="myPic" class="myPic">
+
+    <h1 class="h1">Hi, I'm <span style="color: aqua;">Princess Ysha</span></h1>
+
+    <p id="about" onclick="showChoices()" class="about">
+        <i class="fas fa-info-circle"><span style="font-family: Tahoma; font-size: 20px;">About me:</span></i>
+    </p>
+
+    <div id="choices" style="display: none;" class="choices">
+        <button onclick="toggleDescription('choice1')">
+           <i class="fa fa-address-card"><span style="font-family: Tahoma;"> Name and Address</span></i>
+        </button>
+        <div id="choice1-desc" class="description" style="display: none;">
+            <p><span style="color: aqua;">Princess Ysha Larainne S. Panizares</span> is my full name</p>
+            <p><span style="color: aqua;">Address:</span> I'm from the Philippines, living in Sto. Tomas, Candon City, Ilocos Sur!</p>
+        </div>
+
+        <button onclick="toggleDescription('choice2')">
+            <i class="fa fa-graduation-cap"><span style="font-family: Tahoma;"> Education Background</span></i>
+        </button>
+        <div id="choice2-desc" class="description" style="display: none;">
+            <p><span style="color: aqua;">Elementary:</span> Sto. Tomas Elementary School and Don Bosco School</p>
+            <p><span style="color: aqua;">High School:</span> Sto. Tomas National High School</p>
+            <p><span style="color: aqua;">Senior High School:</span> Candon National High School</p>
+        </div>
+
+        <button onclick="toggleDescription('choice3')">
+            <i class="fa fa-code"><span style="font-family: Tahoma;"> Programming Skills</span></i>
+        </button>
+        <div id="choice3-desc" class="description" style="display: none;">
+            <p><span style="color: aqua;">HTML:</span> HTML is one of the languages I love to use when making websites.</p>
+            <p><span style="color: aqua;">CSS:</span> Though not a full programming language, I love using CSS for styling.</p>
+            <p><span style="color: aqua;">JavaScript:</span> I find it challenging sometimes but I enjoy using it for interactivity.</p>
+        </div>
+    </div>
+
+</div>
+<div class="fb">
+    <p>
+        <img src="facebook.png" alt=""><a href="https://www.facebook.com/princessysha.panizares" style="color: aqua;"> Facebook  
+        <span style="margin-left: 15px;"><img src="instagram.png" alt=""><a href="https://www.instagram.com/qy_jngumi/profilecard/?igsh=MXJlYXc2c2VrOTY3ag==" style="color: aqua;"> Instagram</a></span>
+        <span style="margin-left: 15px;"><img src="github.png" alt=""><a href="https://github.com/jangjangmi" style="color: aqua;">Github</a></span>
+    </p>
+</div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
